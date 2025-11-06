@@ -55,7 +55,7 @@ def main():
     print(f"{'Product':>8} | {'Current $':>10} | {'Optimal $':>10} | {'Change':>8} | {'Profit $':>10}")
     print("-" * 70)
     for product in sorted_products:
-        print(f"{product['product_id']:8d} | "
+        print(f"{int(product['product_id']):8d} | "
               f"${product['current_price']:9.2f} | "
               f"${product['optimal_price']:9.2f} | "
               f"{product['price_change_pct']:7.2f}% | "

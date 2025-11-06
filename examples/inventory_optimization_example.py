@@ -56,8 +56,8 @@ def main():
     print(f"{'Product':>8} | {'Units':>7} | {'Cost $':>10} | {'Revenue $':>12} | {'Profit $':>11} | {'ROI':>8}")
     print("-" * 80)
     for product in sorted_products:
-        print(f"{product['product_id']:8d} | "
-              f"{product['units_to_stock']:7.0f} | "
+        print(f"{int(product['product_id']):8d} | "
+              f"{int(product['units_to_stock']):7d} | "
               f"${product['total_cost']:9.2f} | "
               f"${product['expected_revenue']:11.2f} | "
               f"${product['expected_profit']:10.2f} | "

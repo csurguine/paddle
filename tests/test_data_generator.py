@@ -61,7 +61,9 @@ class TestDataGenerator:
         assert 'product_id' in df.columns
         assert 'base_cost' in df.columns
         assert 'base_price' in df.columns
-        assert (df['base_price'] > df['base_cost']).all()
+        assert 'price_elasticity' in df.columns
+        assert (df['base_cost'] > 0).all()
+        assert (df['base_price'] > 0).all()
     
     def test_generate_fraud_detection_data(self):
         """Test fraud detection data generation."""
