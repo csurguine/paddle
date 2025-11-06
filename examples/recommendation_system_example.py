@@ -47,7 +47,7 @@ def main():
         
         if len(user_history) > 0:
             # Get purchased products
-            purchased = user_history[user_history['purchased'] == True]
+            purchased = user_history[user_history['purchased']]
             if len(purchased) > 0:
                 purchased_products = products_df[
                     products_df['product_id'].isin(purchased['product_id'])
